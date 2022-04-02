@@ -2,4 +2,5 @@
   <ul>
       <li *ngFor="let author1 of Authors_">{{author1}}</li>
   </ul>
-  <button class="btn btn-primary">Save</button>
+  <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+  <button class="btn" (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>

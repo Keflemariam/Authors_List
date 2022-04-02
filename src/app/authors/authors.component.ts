@@ -10,8 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class AuthorsComponent  {
   title="Authors";
   Authors_;
+  email="email@example.com";
+  isActive=true;
   constructor(service: AuthorsService){
-      this.Authors_=service.getAuthors();
+      this.Authors_=service.getAuthors();      
+  }
+  onKeyUp(){
+    console.log(this.email);
+  }
+  onSave($event:any){
+    $event.stopPropagation();
+    console.log("Button was clicked" , $event );
   }
   
 
