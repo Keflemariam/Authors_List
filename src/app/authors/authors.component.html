@@ -5,10 +5,14 @@
   <ul>
     <li>Author of the year</li>
     <li>{{Author1.name | uppercase}}</li>
-    <li>{{Author1.Earning | currency:'USD':true:'3.2-2'}}</li>
+    <li>{{Author1.Earning | currency:'USD':'symbol':'3.2-2'}}</li>
     <li>{{Author1.Reveiwers | number}}</li>
     <li>{{Author1.rating | number:'1.1-1'}}</li>
     <li>{{Author1.releaseDate| date}}</li>
   </ul>
+ 
   <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
   <button class="btn" (click)="onSave($event)" [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
+  <p> Test 
+    <span class="glyphicon glyphicon-star" ></span>
+   </p>

@@ -11,11 +11,15 @@ export class AuthorsComponent  {
   title="Authors";
   Authors_;
   Author1;
+  favorite=false;
   email="email@example.com";
   isActive=true;
   constructor(service: AuthorsService){
       this.Authors_=service.getAuthors();   
       this.Author1=service.getAuthor();   
+  }
+  onClick(){
+    this.favorite=!this.favorite;
   }
   onKeyUp(){
     console.log(this.email);
