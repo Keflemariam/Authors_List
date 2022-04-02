@@ -11,7 +11,7 @@ export class AuthorsComponent  {
   title="Authors";
   Authors_;
   Author1;
-  favorite=false;
+  isSelected=false;
   email="email@example.com";
   isActive=true;
   constructor(service: AuthorsService){
@@ -19,7 +19,7 @@ export class AuthorsComponent  {
       this.Author1=service.getAuthor();   
   }
   onClick(){
-    this.favorite=!this.favorite;
+    this.isSelected=!this.isSelected;
   }
   onKeyUp(){
     console.log(this.email);
