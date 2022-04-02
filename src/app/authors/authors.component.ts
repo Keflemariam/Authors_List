@@ -10,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class AuthorsComponent  {
   title="Authors";
   Authors_;
+  Author1;
   email="email@example.com";
   isActive=true;
   constructor(service: AuthorsService){
-      this.Authors_=service.getAuthors();      
+      this.Authors_=service.getAuthors();   
+      this.Author1=service.getAuthor();   
   }
   onKeyUp(){
     console.log(this.email);
