@@ -1,0 +1,12 @@
+<p>new-course-form works!</p>
+<form>
+    <input
+        type="text" class="form-control"
+        (keyup.enter)="addTopic(topic)" #topic>
+    <ul class="list-group">
+        <li
+            *ngFor="let topic of getControls()"
+            class="list-group-item"></li>
+            {{topic.value}}
+    </ul>    
+</form>
